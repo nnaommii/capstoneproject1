@@ -1,0 +1,191 @@
+/* project thumbnails = 600px width
+background images = 1400px to 2000px width */
+
+/* .middle-align {
+    width: 950px;
+    margin: 0 auto;
+} */
+
+/* #intro {
+    background-color: rgb(119, 159, 219);
+    background-image: repeating-linear-gradient(aliceblue,white,pink);
+    padding: 10px;
+} */
+
+* {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+body {
+    margin: 0;
+}
+
+#about-me {
+    font-size: 77px;
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 0;
+    text-align: center;
+    background-color: pink;
+    color: white;
+}
+
+/* #intro {
+    background-image: url("pics/scenic.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+    margin: 0; 
+    padding: 10px;
+    color: white;
+} */
+
+h2 {
+    /* border: 5px solid pink; */
+    font-size: 40px; /* enlarging the font size will also make the margin space looks bigger -> can set margin: 0 */
+    /* font-style: italic; */
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    /* font-family: 'Squada One', cursive; this is from google fonts */
+}
+
+/* img {
+    background-size: cover;
+    float: left;
+    margin: 10px;
+} */
+
+p, ul {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    line-height: 2; /* 2 of the font size */
+    margin: 10px;
+}
+
+/* button {
+    background-color: plum;
+    font-size: 16px;
+    text-decoration: none;
+    border: black;
+} */
+
+#about-baby, #about-music {
+    font-size: 77px;
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 0;
+    text-align: center;
+    color: black;
+    background-color: aliceblue;
+} /* combining selectors */
+
+/* #about-music a -> the links under this section */
+
+/* specificity: * < p < ul li a < class < .class p < #id < #id p
+!important (this style will take precedence) */
+
+#about-butter {
+    font-size: 77px;
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 0;
+    text-align: center;
+    color: black;
+    background-color: aliceblue;
+}
+
+/* #butter-background {
+    background-image: url("pics/butter3.jpg");
+    background-size: cover; 
+    background-attachment: fixed;
+    transition: height 2s ease-in;
+} */
+
+/* section {
+  height: 10000px;
+} */
+
+#butter-img {
+    width: 400px;
+    height: 400px; 
+    transition: height 2s ease-in-out, width 2s ease-in-out;
+    /* transform: translateX(100px) -> 100px from the left edge of the screen; can also put under the transiton e.g. transform 2s ease-out */
+    will-change: height, width;
+
+}
+
+#butter-img.moving {
+    width: 100%;
+    height: auto;
+}
+
+#footer {
+    background-color: pink;
+    padding: 5px;
+}
+
+.contact-list {
+    /* color: white; */
+    /* background: rgb(228, 106, 177); */
+    margin: 4px;
+    padding: 4px;
+    border-color: black;
+    border-style: dashed;
+    list-style-type: none; /* to remove bullets */
+    padding: 0;
+    display: flex; /* items align horizontally */
+    justify-content: center;
+}
+
+.contact-list a {
+    padding: 2px;
+    display: inline-block; /* since links are inline element */ 
+}
+
+.contact-list a:hover {
+    text-decoration: None; /* when you hover over the link, the underline is removed */
+    /* background: rgba(228, 106, 177); */
+    padding: 8px;
+    border-radius: 4px; /* round up the edges */
+}
+
+.column img {
+    width: 450px;
+    height: 600px;
+    padding: 0 10px 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.column { 
+    flex: 50%;
+}
+
+.hidden {
+    transform: translateX(-100%);
+}
+
+.show { 
+    transform: translateX(0);
+}
+
+#notification {
+    display:none;
+}
+
+#notification.show {
+    display:block;
+}
+
+@media only screen and (max-width : 450px) {
+/* Your Styles */
+    .column img {
+        width: 300px;
+        height: 400px;
+    }
+}
+
