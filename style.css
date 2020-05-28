@@ -228,5 +228,17 @@ button:hover {
         width: 300px;
         height: 400px;
     }
+
+    .rach {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+    .para {
+      font-size: 15px;
+      overflow: hidden;
+    }
 }
 
