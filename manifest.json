@@ -1,6 +1,6 @@
 {
-  "name": "Naomi Goh Qin En",
-  "short_name": "Naomi",
+  "name": "Hello from PWA",
+  "short_name": "hello",
   "lang":"en-US",
   "start_url":"index.html",
   "display":"standalone",

@@ -10,13 +10,43 @@
 //     }
 // })
 
+let pageOneBtn = document.querySelector("#page1-btn");
+pageOneBtn.addEventListener("click", async function(){
+  let response = await axios.get('aboutme.html');
+  page1.innerHTML = response.data; 
+  if(page1.classList.contains("hidden")){
+    page1.classList.add("show");
+    page1.classList.remove("hidden");
+    page2.classList.add("hidden");
+    page2.classList.remove("show");
+    page3.classList.add("hidden");
+    page3.classList.remove("show");
+    page4.classList.add("hidden");
+    page4.classList.remove("show");
+  } else{
+    page1.classList.remove("show");
+    page1.classList.add("hidden");
+  }
+})
+
 let pageTwoBtn = document.querySelector("#page2-btn");
 // let pageTwo = document.querySelector("#page2");
 pageTwoBtn.addEventListener("click", async function(){
   let response = await axios.get('music.html');
   page2.innerHTML = response.data; 
-  page2.classList.add("show");
-  page2.classList.remove("hidden");
+  if(page2.classList.contains("hidden")){
+    page2.classList.add("show");
+    page2.classList.remove("hidden");
+    page1.classList.add("hidden");
+    page1.classList.remove("show");
+    page3.classList.add("hidden");
+    page3.classList.remove("show");
+    page4.classList.add("hidden");
+    page4.classList.remove("show");
+  } else{
+    page2.classList.remove("show");
+    page2.classList.add("hidden");
+  }
 })
 
 let pageThreeBtn = document.querySelector("#page3-btn");
@@ -24,8 +54,19 @@ let pageThreeBtn = document.querySelector("#page3-btn");
 pageThreeBtn.addEventListener("click", async function(){
   let response = await axios.get('butter.html');
   page3.innerHTML = response.data; 
-  page3.classList.add("show");
-  page3.classList.remove("hidden");
+  if(page3.classList.contains("hidden")){
+    page3.classList.add("show");
+    page3.classList.remove("hidden");
+    page1.classList.add("hidden");
+    page1.classList.remove("show");
+    page2.classList.add("hidden");
+    page2.classList.remove("show");
+    page4.classList.add("hidden");
+    page4.classList.remove("show");
+  } else{
+    page3.classList.remove("show");
+    page3.classList.add("hidden");
+  }
 })
 
 // let button = document.getElementById("animate-btn");
@@ -38,6 +79,17 @@ let pageFourBtn = document.querySelector("#page4-btn");// let pageFour = documen
 pageFourBtn.addEventListener("click", async function(){
   let response = await axios.get('baby.html');
   page4.innerHTML = response.data;
-  page4.classList.add("show");
-  page4.classList.remove("hidden");
+  if(page4.classList.contains("hidden")){
+    page4.classList.add("show");
+    page4.classList.remove("hidden");
+    page1.classList.add("hidden");
+    page1.classList.remove("show");
+    page2.classList.add("hidden");
+    page2.classList.remove("show");
+    page3.classList.add("hidden");
+    page3.classList.remove("show");
+  } else{
+    page4.classList.remove("show");
+    page4.classList.add("hidden");
+  }
 })

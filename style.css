@@ -25,6 +25,7 @@ body {
     font-size: 77px;
     font-family: 'Staatliches', cursive;
     margin-bottom: 0;
+    margin-top: 0;
     text-align: center;
     background-color: pink;
     color: white;
@@ -42,11 +43,12 @@ body {
 
 h2 {
     /* border: 5px solid pink; */
-    font-size: 40px; /* enlarging the font size will also make the margin space looks bigger -> can set margin: 0 */
+    font-size: 50px; /* enlarging the font size will also make the margin space looks bigger -> can set margin: 0 */
     /* font-style: italic; */
     text-align: center;
     padding: 5px;
     margin: 10px;
+    font-family: 'Staatliches', cursive;
     /* font-family: 'Squada One', cursive; this is from google fonts */
 }
 
@@ -70,13 +72,23 @@ p, ul {
     border: black;
 } */
 
+.rach {
+  float: left;
+  width: 400px;
+  height: 400px;
+}
+
+.para {
+  font-size: 17px;
+}
+
 #about-baby, #about-music {
     font-size: 77px;
     font-family: 'Staatliches', cursive;
     margin-bottom: 0;
     text-align: center;
     color: black;
-    background-color: aliceblue;
+    background-color: pink;
 } /* combining selectors */
 
 /* #about-music a -> the links under this section */
@@ -90,7 +102,11 @@ p, ul {
     margin-bottom: 0;
     text-align: center;
     color: black;
-    background-color: aliceblue;
+    background-color: pink;
+}
+
+#page1, #page2, #page3, #page4 {
+  position: absolute;
 }
 
 /* #butter-background {
@@ -104,11 +120,11 @@ p, ul {
   height: 10000px;
 } */
 
-#butter-img {
+/* #butter-img {
     width: 400px;
     height: 400px; 
     transition: height 2s ease-in-out, width 2s ease-in-out;
-    /* transform: translateX(100px) -> 100px from the left edge of the screen; can also put under the transiton e.g. transform 2s ease-out */
+    transform: translateX(100px) -> 100px from the left edge of the screen; can also put under the transiton e.g. transform 2s ease-out
     will-change: height, width;
 
 }
@@ -116,11 +132,36 @@ p, ul {
 #butter-img.moving {
     width: 100%;
     height: auto;
+} */
+
+.btns {
+  text-align: right;
+  background-color: pink;
+  margin: 0; 
+  padding: 0;
+}
+
+button { 
+  color: black;
+  font-family: 'Staatliches', cursive;
+  background-color: pink;
+  font-size: 15px;
+  /* padding: 8px 20px; */
+  border: ridge;
+  /* margin-bottom: 5px; */
+}
+
+button:hover {
+    /* text-decoration: None; when you hover over the link, the underline is removed 
+    background: rgba(228, 106, 177); */
+    padding: 8px 20px;
+    border-radius: 4px; /* round up the edges */
 }
 
 #footer {
     background-color: pink;
     padding: 5px;
+    clear: both;
 }
 
 .contact-list {
